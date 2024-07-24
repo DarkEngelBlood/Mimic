@@ -4,7 +4,7 @@ import styles from "./Navbar.module.css";
 export const NavBar = () => {
   return (
     <>
-      <h1 className={styles.colorAqua}>Mimic</h1>
+      <h1 className={styles.colorDeFondo}>Mimic</h1>
       <ul>
         <li>
           <a href="#">Inicio</a>
