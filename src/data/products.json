@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Monkey D. Luffy Gear 5",
+    "category": "Figura",
+    "description": "Luffy con Gear 5 activado",
+    "pictureUrl": "https://d22fxaf9t8d39k.cloudfront.net/79a68ee4e17586a0bd80820277b86ce899eeab4de71f556870e5805c11012a1c165359.jpg",
+    "price": 35
+  },
+  {
+    "id": 2,
+    "title": "Armadura de Berserk",
+    "category": "Figura",
+    "description": "Guts con su armadura de Berserk",
+    "pictureUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSaREc9fJXnanCKCG3Un-YNeZxl_h-Inn2zj4bFP7FpyaZxtLyKaIYkSEmJRzYZrThdoOpn7IVS81Tj0Mqm2KCzYbNwuifith77qh5Z_MCEslu_iA6KmUxBuNdheqDTY1IHa7HXqoWRaUexkOpe2u-OgwQTe37qMZYyEoV_K7vCAFJpnSQCfxMeH7kXg/s800/mj1.webp",
+    "price": 200
+  },
+  {
+    "id": 3,
+    "title": "Tomo de Chainsaw Man",
+    "category": "Manga",
+    "description": "Una historia que trata sobre cazadores de demonios",
+    "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_718529-MLA48329807452_112021-O.webp",
+    "price": 5
+  },
+  {
+    "id": 4,
+    "title": "Tomo remix de Bleach",
+    "category": "Manga",
+    "description": "Una historia que trata sobre segadores de almas",
+    "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_856862-MLC53393972204_012023-O.webp",
+    "price": 5
+  }
+]
