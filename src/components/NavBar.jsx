@@ -5,22 +5,21 @@ import styles from "./Navbar.module.css";
 export const NavBar = () => {
   return (
     <>
-      <div >
+      <div className={styles.navbar}>
         <h1>Mimic</h1>
-        <h2 >Albertito</h2>
-        <ul >
-          <li >
-            <Link as={NavLink} to="/" >
+        <ul className={styles.ul}>
+          <li className={styles.list}>
+            <Link as={NavLink} to="/" className={styles.a}>
               Inicio
             </Link>
           </li>
-          <li >
-            <Link as={NavLink} to="/category/Figura" >
+          <li className={styles.list}>
+            <Link as={NavLink} to="/category/Figura" className={styles.a}>
               Figuras
             </Link>
           </li>
-          <li >
-            <Link as={NavLink} to="/category/Manga" >
+          <li className={styles.list}>
+            <Link as={NavLink} to="/category/Manga" className={styles.a}>
               Mangas
             </Link>
           </li>
