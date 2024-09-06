@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Link, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import {
   getFirestore,
   getDocs,
@@ -8,6 +8,7 @@ import {
   collection,
 } from "firebase/firestore"
 import ItemList from "./ItemList"
+import LoadingScreen from './LoadingScreen'
 
 // Se encarga de obtener los items de la base de datos
 export const ItemListContainer = () => {
@@ -17,6 +18,7 @@ export const ItemListContainer = () => {
   const { id } = useParams()
 
   useEffect(() => {
+    setLoading(true)
     const db = getFirestore()
 
     const ref = !id ? collection(db, "items") : query(collection(db, "items"), where("categoryId", "==", id))
@@ -32,7 +34,7 @@ export const ItemListContainer = () => {
       .finally(() => setLoading(false))
   }, [id])
 
-  if (loading) return "wait"
+  if (loading) return <LoadingScreen />
   return (
     <ItemList item={item} />
   )

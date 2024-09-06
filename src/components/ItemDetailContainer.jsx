@@ -5,6 +5,7 @@ import {
   getDoc, doc
 } from "firebase/firestore"
 import ItemDetail from "./ItemDetail/ItemDetail"
+import LoadingScreen from './LoadingScreen'
 
 
 export const ItemDetailContainer = () => {
@@ -25,7 +26,7 @@ export const ItemDetailContainer = () => {
       .finally(() => setLoading(false))
   }, [id])
 
-  if (loading) return "wait"
+  if (loading) return <LoadingScreen />
 
   return (
     <ItemDetail item={item} />

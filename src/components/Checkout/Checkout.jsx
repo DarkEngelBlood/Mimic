@@ -4,6 +4,7 @@ import * as Yup from 'yup'
 import { getFirestore, collection, addDoc, Timestamp } from 'firebase/firestore'
 import { CartContext } from '../../contexts/CartContext'
 import Brief from './Brief'
+import LoadingScreen from '../LoadingScreen'
 
 
 const Checkout = () => {
@@ -61,7 +62,6 @@ const Checkout = () => {
       .required('El teléfono es requerido')
   })
 
-  // Inicializa Formik
   const formik = useFormik({
     initialValues: {
       name: '',
@@ -70,12 +70,11 @@ const Checkout = () => {
     },
     validationSchema,
     onSubmit: (values) => {
-      // Guardar los datos del formulario en el estado
       setUserData(values)
     }
   })
 
-  if (loading) return <h1>Procesando...</h1>
+  if (loading) return <LoadingScreen />
   if (procesado) return <Brief orderId={orderId} />
 
   return (
