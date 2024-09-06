@@ -11,7 +11,11 @@ const Cart = () => {
   }
 
   if (items.length === 0) {
-    return <h1>No hay items en el carrito</h1>
+    return (
+      <div className={styles.emptyCartContainer}>
+        <h1 className={styles.emptyCartMessage}>No hay items en el carrito</h1>
+      </div>
+    )
   }
 
   return (

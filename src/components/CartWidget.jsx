@@ -14,7 +14,7 @@ export const CartWidget = () => {
   }, [items])
 
   return (
-    <Link to={'/cart'}>
+    <Link to={'/cart'} className={styles.link}>
       <img src={cart} alt="Carrito de compras" className={styles.cart} />
       <span className={styles.span}>{count}</span>
     </Link>

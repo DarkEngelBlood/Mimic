@@ -2,7 +2,6 @@ import React from 'react'
 import styles from './ItemQuantitySelector.module.css'
 
 const ItemQuantitySelector = ({ stock, onAdd }) => {
-
   const [count, setCount] = React.useState(1)
 
   const handleIncrease = () => {

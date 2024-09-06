@@ -5,6 +5,7 @@ import { NavBar } from "./components/NavBar"
 import { Provider } from "./contexts/CartContext"
 import Cart from './components/Cart'
 import Checkout from './components/Checkout/Checkout'
+import NotFound from './components/NotFound'
 
 function App() {
   return (
@@ -32,7 +33,7 @@ function App() {
             path="/checkout"
             element={<Checkout greeting="Item" />}
           ></Route>
-          <Route path="*" element={404}></Route>
+          <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </BrowserRouter>
     </Provider>

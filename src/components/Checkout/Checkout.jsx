@@ -5,12 +5,10 @@ import { getFirestore, collection, addDoc, Timestamp } from 'firebase/firestore'
 import { CartContext } from '../../contexts/CartContext'
 import Brief from './Brief'
 import LoadingScreen from '../LoadingScreen'
-
+import styles from './Checkout.module.css'
 
 const Checkout = () => {
-  // Estado para almacenar los datos del formulario
   const [userData, setUserData] = useState(null)
-
   const [orderId, setOrderId] = useState(null)
   const [loading, setLoading] = useState(false)
   const [procesado, setProcesado] = useState(false)
@@ -38,8 +36,8 @@ const Checkout = () => {
         .then((docRef) => {
           setOrderId(docRef.id)
           setProcesado(true)
-          formik.resetForm() // Resetear formulario
-          reset() // Vaciar carrito
+          formik.resetForm()
+          reset()
         })
         .catch((err) => {
           console.error("Error al agregar el documento: ", err)
@@ -48,7 +46,6 @@ const Checkout = () => {
     }
   }, [userData])
 
-  // Esquema de validación con Yup
   const validationSchema = Yup.object({
     name: Yup.string()
       .min(2, 'El nombre debe tener al menos 2 caracteres')
@@ -78,10 +75,9 @@ const Checkout = () => {
   if (procesado) return <Brief orderId={orderId} />
 
   return (
-    <div div >
+    <div className={styles.container}>
       <h2>Formulario de Checkout</h2>
       <form onSubmit={formik.handleSubmit}>
-        {/* Nombre */}
         <div>
           <label htmlFor="name">Nombre</label>
           <input
@@ -93,11 +89,10 @@ const Checkout = () => {
             value={formik.values.name}
           />
           {formik.touched.name && formik.errors.name ? (
-            <div style={{ color: 'red' }}>{formik.errors.name}</div>
+            <div className={styles.error}>{formik.errors.name}</div>
           ) : null}
         </div>
 
-        {/* Email */}
         <div>
           <label htmlFor="email">Email</label>
           <input
@@ -109,11 +104,10 @@ const Checkout = () => {
             value={formik.values.email}
           />
           {formik.touched.email && formik.errors.email ? (
-            <div style={{ color: 'red' }}>{formik.errors.email}</div>
+            <div className={styles.error}>{formik.errors.email}</div>
           ) : null}
         </div>
 
-        {/* Teléfono */}
         <div>
           <label htmlFor="phone">Teléfono</label>
           <input
@@ -125,11 +119,10 @@ const Checkout = () => {
             value={formik.values.phone}
           />
           {formik.touched.phone && formik.errors.phone ? (
-            <div style={{ color: 'red' }}>{formik.errors.phone}</div>
+            <div className={styles.error}>{formik.errors.phone}</div>
           ) : null}
         </div>
 
-        {/* Botón de submit */}
         <button type="submit">Realizar Compra</button>
       </form>
     </div>

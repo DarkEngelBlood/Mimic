@@ -93,3 +93,19 @@
   text-align: right;
   width: 100%;
 }
+
+.emptyCartContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+  color: #343a40;
+  text-align: center;
+  padding: 20px;
+}
+
+.emptyCartMessage {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
