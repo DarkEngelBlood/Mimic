@@ -2,7 +2,7 @@
 
 Este proyecto de E-commerce con React fue creado con el objetivo de presentarlo como trabajo final para la certificación de "React" en "CoderHouse".
 
-Visita el proyecto en la siguiente página: [mimic-store.vercel.app](mimic-store.vercel.app)
+Visita el proyecto en la siguiente página: [mimic-store.vercel.app](https://mimic-store.vercel.app)
 
 ## Descripción:
 
