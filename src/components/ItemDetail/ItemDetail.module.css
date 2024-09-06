@@ -1,0 +1,52 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.description{
+    margin: 20px;
+    text-align: justify;
+}
+
+.itemCounter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.title {
+    font-size: 30px;
+}
+
+.h2 {
+    font-size: 20px;
+}
+
+.h3 {
+    font-size: 15px;
+}
+
+.p {
+    margin: 3px 0;
+    font-size: 15px;
+}

@@ -1,0 +1,52 @@
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 20px;
+  width: 300px;
+}
+
+.counterContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 auto;
+  padding: 20px;
+  width: 300px;
+}
+
+.button{
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  margin: 0 5px;
+}
+
+.button:hover{
+  background-color: #e0e0e0;
+}
+
+.counter{
+  font-size: 20px;
+  margin: 0 10px;
+}
+
+.buttonBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 auto;
+  padding: 20px;
+  width: 300px;
+}
+
+.buttonAdd{
+  background-color: #f0f0f0;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 0 5px;
+}

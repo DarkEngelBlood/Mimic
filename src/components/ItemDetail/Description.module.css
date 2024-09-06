@@ -1,0 +1,20 @@
+.title {
+  font-size: 30px;
+}
+
+.h2 {
+  font-size: 20px;
+}
+
+.h3 {
+  font-size: 15px;
+}
+
+.p {
+  margin: 3px 0;
+  font-size: 15px;
+}
+.description{
+  margin: 20px;
+  text-align: justify;
+}

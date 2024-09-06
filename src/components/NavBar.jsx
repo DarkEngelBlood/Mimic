@@ -1,12 +1,14 @@
-import { Link, NavLink } from "react-router-dom";
-import { CartWidget } from "./CartWidget";
-import styles from "./Navbar.module.css";
+import { Link, NavLink } from "react-router-dom"
+import { CartWidget } from "./CartWidget"
+import styles from "./Navbar.module.css"
 
 export const NavBar = () => {
   return (
-    <>
-      <div className={styles.navbar}>
+    <div className={styles.navbar}>
+      <div>
         <h1>Mimic</h1>
+      </div>
+      <div>
         <ul className={styles.ul}>
           <li className={styles.list}>
             <Link as={NavLink} to="/" className={styles.a}>
@@ -25,7 +27,9 @@ export const NavBar = () => {
           </li>
         </ul>
       </div>
-      <CartWidget />
-    </>
-  );
-};
+      <div>
+        <CartWidget />
+      </div>
+    </div>
+  )
+}
